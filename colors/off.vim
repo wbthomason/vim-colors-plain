@@ -17,7 +17,7 @@ endif
 
 let g:colors_name='off'
 
-let s:black           = { "gui": "#212121", "cterm": "0"   }
+let s:black           = { "gui": "#121212", "cterm": "0"   }
 let s:medium_gray     = { "gui": "#767676", "cterm": "243" }
 let s:white           = { "gui": "#F1F1F1", "cterm": "15"  }
 let s:actual_white    = { "gui": "#FFFFFF", "cterm": "231" }
@@ -40,7 +40,7 @@ let s:dark_green      = { "gui": "#10A778", "cterm": "2"   }
 let s:light_green     = { "gui": "#5FD7A7", "cterm": "10"  }
 let s:dark_purple     = { "gui": "#523C79", "cterm": "5"   }
 let s:light_purple    = { "gui": "#6855DE", "cterm": "13"  }
-let s:yellow          = { "gui": "#F3E430", "cterm": "11"  }
+let s:light_yellow    = { "gui": "#F3E430", "cterm": "11"  }
 let s:dark_yellow     = { "gui": "#A89C14", "cterm": "3"   }
 
 if &background == "dark"
@@ -53,10 +53,15 @@ if &background == "dark"
   let s:cyan            = s:light_cyan
   let s:green           = s:light_green
   let s:red             = s:light_red
+  let s:yellow          = s:light_yellow
   let s:visual          = s:lighter_black
+  let s:cursor_line     = s:light_black
+  let s:status_line     = s:light_black
+  let s:constant        = s:light_blue
+  let s:comment         = s:light_gray
 else
   let s:bg              = s:white
-  let s:bg_subtle       = s:light_black
+  let s:bg_subtle       = s:lighter_gray
   let s:bg_very_subtle  = s:light_gray
   let s:norm            = s:light_black
   let s:norm_subtle     = s:lighter_black
@@ -64,7 +69,12 @@ else
   let s:cyan            = s:dark_cyan
   let s:green           = s:dark_green
   let s:red             = s:dark_red
+  let s:yellow          = s:dark_yellow
   let s:visual          = s:light_blue
+  let s:cursor_line     = s:lighter_gray
+  let s:status_line     = s:lighter_gray
+  let s:constant        = s:dark_blue
+  let s:comment         = s:light_gray
 endif
 
 " https://github.com/noahfrederick/vim-hemisu/
@@ -82,10 +92,9 @@ endfunction
 call s:h("Normal",        {"bg": s:bg, "fg": s:norm})
 call s:h("Noise",         {"bg": s:bg, "fg": s:norm_subtle})
 call s:h("Cursor",        {"bg": s:blue, "fg": s:norm})
-call s:h("Comment",       {"fg": s:bg_very_subtle, "gui": "italic"})
+call s:h("Comment",       {"fg": s:comment, "gui": "italic"})
 
-"call s:h("Constant",      {"fg": s:cyan})
-call s:h("Constant",      {"bg": s:bg, "fg": s:dark_blue})
+call s:h("Constant",      {"bg": s:bg, "fg": s:constant})
 hi! link Character        Constant
 hi! link Number           Constant
 hi! link Boolean          Constant
@@ -141,8 +150,6 @@ hi! link ModeMsg MoreMsg
 call s:h("LineNr",        {"fg": s:bg_subtle})
 call s:h("CursorLineNr",  {"fg": s:blue, "bg": s:bg_very_subtle})
 call s:h("Question",      {"fg": s:red})
-call s:h("StatusLine",    {"bg": s:bg_very_subtle})
-call s:h("StatusLineNC",  {"bg": s:bg_very_subtle, "fg": s:medium_gray})
 call s:h("VertSplit",     {"bg": s:bg_very_subtle, "fg": s:bg_very_subtle})
 call s:h("Title",         {"fg": s:dark_blue})
 call s:h("Visual",        {"bg": s:visual})
@@ -169,7 +176,13 @@ else
   call s:h("SpellLocal",  {"cterm": "underline", "fg": s:dark_green})
 endif
 
-call s:h("Pmenu",         {"fg": s:norm, "bg": s:lighter_gray})
+call s:h("StatusLine",        {"gui": "underline", "bg": s:bg, "fg": s:light_gray})
+call s:h("StatusLineOk",      {"gui": "underline", "bg": s:bg, "fg": s:green})
+call s:h("StatusLineError",   {"gui": "underline", "bg": s:bg, "fg": s:pink})
+call s:h("StatusLineWarning", {"gui": "underline", "bg": s:bg, "fg": s:dark_yellow})
+call s:h("StatusLineNC",      {"gui": "underline", "bg": s:bg, "fg": s:light_black})
+
+call s:h("Pmenu",         {"fg": s:norm, "bg": s:cursor_line})
 call s:h("PmenuSel",      {"fg": s:norm, "bg": s:blue})
 call s:h("PmenuSbar",     {"fg": s:norm, "bg": s:bg_subtle})
 call s:h("PmenuThumb",    {"fg": s:norm, "bg": s:bg_subtle})
@@ -177,10 +190,10 @@ call s:h("TabLine",       {"fg": s:norm, "bg": s:bg_very_subtle})
 call s:h("TabLineSel",    {"fg": s:blue, "bg": s:bg_subtle, "gui": "bold", "cterm": "bold"})
 call s:h("TabLineFill",   {"fg": s:norm, "bg": s:bg_very_subtle})
 call s:h("CursorColumn",  {"bg": s:bg_very_subtle})
-call s:h("CursorLine",    {"bg": s:lighter_gray})
+call s:h("CursorLine",    {"bg": s:cursor_line})
 call s:h("ColorColumn",   {"bg": s:bg_subtle})
 
-call s:h("MatchParen",    {"bg": s:lighter_gray, "fg": s:norm})
+call s:h("MatchParen",    {"bg": s:bg_subtle, "fg": s:norm})
 call s:h("qfLineNr",      {"fg": s:medium_gray})
 
 call s:h("htmlH1",        {"bg": s:bg, "fg": s:norm})
