@@ -1,41 +1,25 @@
-# vim-colors-off
+# vim-colors-plain
 
-*This is very much a work in progress*
+This is a fork of [vim-colors-off][] which is being developed based on my
+personal taste.
 
-For a number of weeks, I ran vim with `syntax off`. It was quite nice, 
-with only two annoyances:
+![Screenshot](screenshots/plain-dark.png)
+![Screenshot](screenshots/plain-light.png)
 
-- Bright white on jet black was a bit off-putting.
-- There were cases when I did miss the lack of color, vimdiff for 
-  example.
+## Installation & Usage
 
-Therefore, I aimed to find or create a colorscheme to solve these two 
-issues.
-
-The result is very much based on the [pencil][] colorscheme, which is 
-surprising because it's a very colorful colorscheme, but:
-
-- It uses a very sane approach to defining and setting colors
-- It has nice background and foreground colors
-- In the areas where I do want color, I like how it colors things
-
-[pencil]: https://github.com/reedes/vim-colors-pencil
-
-![Screenshot](shot.png)
-
-Slightly out of date, not super exciting...
-
-## Installation
-
-- Use [Vundle][]
-- Add "pbrisbin/vim-colors-off" as a plugin
-
-[vundle]: https://github.com/gmarik/Vundle.vim
-
-## Usage
+With [vim-plug][] you add this to the `.vimrc`:
 
 ```
-:colorscheme off
+Plug 'andreypopp/vim-colors-plain'
 ```
 
-Supports both `background=light` and `background=dark`.
+Then:
+
+```
+set background=light " Set to dark for a dark variant
+colorscheme plain
+```
+
+[vim-colors-off]: https://github.com/pbrisbin/vim-colors-off
+[vim-plug]: https://github.com/junegunn/vim-plug

@@ -1,12 +1,15 @@
-" Name:       off.vim
+" Name:       plain.vim
 " Version:    0.1
-" Maintainer: github.com/pbrisbin
+" Maintainer: github.com/andreypopp
 " License:    The MIT License (MIT)
 "
-" A colorscheme meant to look like a more pleasant version of syntax off.
-" Structure and what little color there is is taken from pencil.vim
+" Based on
 "
-" https://github.com/reedes/vim-colors-pencil
+"   https://github.com/pbrisbin/vim-colors-off (MIT License)
+"
+" which in turn based on
+"
+"   https://github.com/reedes/vim-colors-pencil (MIT License)
 "
 """
 hi clear
@@ -15,7 +18,7 @@ if exists('syntax on')
     syntax reset
 endif
 
-let g:colors_name='off'
+let g:colors_name='plain'
 
 let s:black           = { "gui": "#121212", "cterm": "0"   }
 let s:medium_gray     = { "gui": "#767676", "cterm": "243" }
