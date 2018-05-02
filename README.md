@@ -6,6 +6,11 @@ personal taste.
 ![Screenshot](screenshots/plain-dark.png)
 ![Screenshot](screenshots/plain-light.png)
 
+## Motivation
+
+Minimalistic colorscheme which uses bold to highlight keywords and a
+distinguished color for constant literals (string, numbers, JSX tags).
+
 ## Installation & Usage
 
 With [vim-plug][] you add this to the `.vimrc`:
@@ -21,5 +26,16 @@ set background=light " Set to dark for a dark variant
 colorscheme plain
 ```
 
+## FAQ
+
+- What terminal emulator is shown on screenshots?
+
+  This is [kitty][]. Fast and highly configurable.
+
+- Is this Vim or Neovim on screenshots and why?
+
+  This is Neovim.
+
 [vim-colors-off]: https://github.com/pbrisbin/vim-colors-off
 [vim-plug]: https://github.com/junegunn/vim-plug
+[kitty]: https://github.com/kovidgoyal/kitty
