@@ -226,7 +226,7 @@ hi link jsGlobalNodeObjects Normal
 hi link jsArrowFunction Noise
 hi link StorageClass Statement
 
-call s:h("xmlTag", {"bg": s:bg, "fg": s:dark_blue, "gui": "italic"})
+call s:h("xmlTag", {"bg": s:bg, "fg": s:constant})
 hi link xmlTagName xmlTag
 hi link xmlEndTag xmlTag
 hi link xmlAttrib xmlTag
