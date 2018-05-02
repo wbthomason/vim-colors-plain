@@ -28,14 +28,21 @@ colorscheme plain
 
 ## FAQ
 
-- What terminal emulator is shown on screenshots?
+- What terminal emulator is shown on the screenshots?
 
   This is [kitty][]. Fast and highly configurable.
 
-- Is this Vim or Neovim on screenshots and why?
+- Is this Vim or Neovim on the screenshots and why?
 
   This is Neovim.
+
+- What font is being used on the screenshots?
+
+  [Pragmata Pro][] which is not free but worth the money paid. [Iosevka][] is
+  another great font I used before which is similar in feel.
 
 [vim-colors-off]: https://github.com/pbrisbin/vim-colors-off
 [vim-plug]: https://github.com/junegunn/vim-plug
 [kitty]: https://github.com/kovidgoyal/kitty
+[Pragmata Pro]: https://www.fsd.it/shop/fonts/pragmatapro/
+[Iosevka]: https://github.com/be5invis/Iosevka
