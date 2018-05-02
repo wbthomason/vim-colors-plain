@@ -62,6 +62,7 @@ if &background == "dark"
   let s:status_line     = s:light_black
   let s:constant        = s:light_blue
   let s:comment         = s:light_gray
+  let s:selection       = s:light_yellow
 else
   let s:bg              = s:white
   let s:bg_subtle       = s:lighter_gray
@@ -78,6 +79,7 @@ else
   let s:status_line     = s:lighter_gray
   let s:constant        = s:dark_blue
   let s:comment         = s:light_gray
+  let s:selection       = s:light_yellow
 endif
 
 " https://github.com/noahfrederick/vim-hemisu/
@@ -146,8 +148,8 @@ call s:h("SpecialKey",    {"fg": s:light_green})
 call s:h("NonText",       {"fg": s:medium_gray})
 call s:h("Directory",     {"fg": s:dark_blue})
 call s:h("ErrorMsg",      {"fg": s:pink})
-call s:h("IncSearch",     {"bg": s:yellow, "fg": s:light_black})
-call s:h("Search",        {"bg": s:yellow, "fg": s:light_black})
+call s:h("IncSearch",     {"bg": s:selection, "fg": s:light_black})
+call s:h("Search",        {"bg": s:selection, "fg": s:light_black})
 call s:h("MoreMsg",       {"fg": s:medium_gray, "cterm": "bold", "gui": "bold"})
 hi! link ModeMsg MoreMsg
 call s:h("LineNr",        {"fg": s:bg_subtle})
