@@ -198,7 +198,7 @@ call s:h("StatusLineError",   {"gui": "underline", "bg": s:bg, "fg": s:pink})
 call s:h("StatusLineWarning", {"gui": "underline", "bg": s:bg, "fg": s:warning})
 
 call s:h("Pmenu",         {"fg": s:norm, "bg": s:cursor_line})
-call s:h("PmenuSel",      {"fg": s:norm, "bg": s:blue})
+call s:h("PmenuSel",      {"fg": s:norm, "bg": s:bg_subtle, "gui": "bold"})
 call s:h("PmenuSbar",     {"fg": s:norm, "bg": s:bg_subtle})
 call s:h("PmenuThumb",    {"fg": s:norm, "bg": s:bg_subtle})
 call s:h("TabLine",       {"fg": s:norm, "bg": s:bg_very_subtle})
@@ -249,7 +249,7 @@ hi link markdownH3 Statement
 hi link markdownH4 Statement
 hi link markdownH5 Statement
 hi link markdownH6 Statement
-hi link markdownListMarker Statement
+hi link markdownListMarker Constant
 hi link markdownCode Constant
 hi link markdownCodeDelimiter Constant
-hi link markdownHeadingDelimiter Statement
+hi link markdownHeadingDelimiter Constant
