@@ -58,7 +58,7 @@ if &background == "dark"
   let s:red             = s:light_red
   let s:yellow          = s:light_yellow
   let s:visual          = s:lighter_black
-  let s:cursor_line     = s:light_black
+  let s:cursor_line     = s:subtle_black
   let s:status_line     = s:light_black
   let s:constant        = s:light_blue
   let s:comment         = s:light_gray
