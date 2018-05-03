@@ -59,7 +59,8 @@ if &background == "dark"
   let s:yellow          = s:light_yellow
   let s:visual          = s:lighter_black
   let s:cursor_line     = s:subtle_black
-  let s:status_line     = s:light_black
+  let s:status_line     = s:light_gray
+  let s:status_line_nc  = s:light_black
   let s:constant        = s:light_blue
   let s:comment         = s:light_gray
   let s:selection       = s:light_yellow
@@ -76,7 +77,8 @@ else
   let s:yellow          = s:dark_yellow
   let s:visual          = s:light_blue
   let s:cursor_line     = s:lighter_gray
-  let s:status_line     = s:lighter_gray
+  let s:status_line     = s:light_black
+  let s:status_line_nc  = s:light_gray
   let s:constant        = s:dark_blue
   let s:comment         = s:light_gray
   let s:selection       = s:light_yellow
@@ -181,11 +183,16 @@ else
   call s:h("SpellLocal",  {"cterm": "underline", "fg": s:dark_green})
 endif
 
-call s:h("StatusLine",        {"gui": "underline", "bg": s:bg, "fg": s:light_gray})
+""" StatusLine
+
+call s:h("StatusLine",        {"gui": "underline", "bg": s:bg, "fg": s:status_line})
+call s:h("StatusLineNC",      {"gui": "underline", "bg": s:bg, "fg": s:status_line_nc})
+
+" Those are not standard but are useful to emphasis different parts of the
+" status line.
 call s:h("StatusLineOk",      {"gui": "underline", "bg": s:bg, "fg": s:green})
 call s:h("StatusLineError",   {"gui": "underline", "bg": s:bg, "fg": s:pink})
 call s:h("StatusLineWarning", {"gui": "underline", "bg": s:bg, "fg": s:dark_yellow})
-call s:h("StatusLineNC",      {"gui": "underline", "bg": s:bg, "fg": s:light_black})
 
 call s:h("Pmenu",         {"fg": s:norm, "bg": s:cursor_line})
 call s:h("PmenuSel",      {"fg": s:norm, "bg": s:blue})
