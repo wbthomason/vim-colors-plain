@@ -255,5 +255,6 @@ hi link markdownH5 Statement
 hi link markdownH6 Statement
 hi link markdownListMarker Constant
 hi link markdownCode Constant
+hi link markdownCodeBlock Constant
 hi link markdownCodeDelimiter Constant
 hi link markdownHeadingDelimiter Constant
