@@ -140,8 +140,8 @@ hi! link Define           PreProc
 hi! link Macro            PreProc
 hi! link PreCondit        PreProc
 
-" __Noise__
-call s:h("Noise",     {"fg": s:bg_very_subtle, "gui": "NONE"})
+" __Operator__
+call s:h("Noise",     {"fg": s:norm_subtle, "gui": "NONE"})
 hi! link Operator     Noise
 hi! link LineNr       Noise
 hi! link CursorLineNr LineNr
