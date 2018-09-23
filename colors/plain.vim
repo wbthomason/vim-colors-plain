@@ -119,10 +119,15 @@ function! s:h(group, style)
 endfunction
 
 " __Normal__
-call s:h("Normal",        {"fg": s:norm})
+if has("gui")
+    call s:h("Normal",        {"fg": s:norm, "bg": s:bg})
+    call s:h("Cursor",        {"fg": s:bg, "bg": s:norm})
+else
+    call s:h("Normal",        {"fg": s:norm})
+    hi! link Cursor           Identifier
+endif
 hi! link Identifier       Normal
 hi! link Function         Identifier
-hi! link Cursor           Identifier
 hi! link Include          Statement
 hi! link Type             Normal
 hi! link StorageClass     Type
