@@ -3,13 +3,22 @@
 This is a fork of [vim-colors-off][] which is being developed based on my
 personal taste.
 
-![Screenshot](screenshots/plain-dark.png)
-![Screenshot](screenshots/plain-light.png)
-
 ## Motivation
 
 Minimalistic colorscheme which uses bold to highlight keywords and a
 distinguished color for constant literals (string, numbers, JSX tags).
+
+## Screenshots
+
+### Light Variant
+
+![Screenshot](screenshots/ocaml.png)
+![Screenshot](screenshots/fzf-files.png)
+
+### Dark Variant
+
+![Screenshot](screenshots/ocaml-dark.png)
+![Screenshot](screenshots/fzf-files-dark.png)
 
 ## Installation & Usage
 
