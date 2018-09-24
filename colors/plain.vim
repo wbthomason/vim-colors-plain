@@ -58,7 +58,8 @@ if &background == "dark"
   let s:cursor_line      = s:subtle_black
   let s:constant         = s:light_blue
   let s:comment          = s:light_gray
-  let s:selection        = s:light_yellow
+  let s:selection        = s:dark_yellow
+  let s:selection_fg     = s:black
   let s:ok               = s:light_green
   let s:warning          = s:yellow
   let s:error            = s:light_red
@@ -79,6 +80,7 @@ else
   let s:constant         = s:dark_blue
   let s:comment          = s:light_gray
   let s:selection        = s:light_yellow
+  let s:selection_fg     = s:light_black
   let s:ok               = s:light_green
   let s:warning          = s:yellow
   let s:error            = s:dark_red
@@ -190,7 +192,7 @@ hi! link Folded   NonText
 hi! link qfLineNr NonText
 
 " __Search__
-call s:h("Search",        {"bg": s:selection, "fg": s:norm})
+call s:h("Search",        {"bg": s:selection, "fg": s:selection_fg})
 hi! link IncSearch Search
 
 " __Visual__
