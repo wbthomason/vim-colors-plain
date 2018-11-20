@@ -29,18 +29,18 @@ let s:subtle_black    = { "gui": "#303030", "cterm": "236" }
 let s:light_gray      = { "gui": "#999999", "cterm": "249" }
 let s:lighter_gray    = { "gui": "#CCCCCC", "cterm": "251" }
 let s:lightest_gray   = { "gui": "#E5E5E5", "cterm": "251" }
-let s:dark_red        = { "gui": "#C30771", "cterm": "1"   }
-let s:light_red       = { "gui": "#E32791", "cterm": "1"   }
-let s:dark_blue       = { "gui": "#008EC4", "cterm": "4"   }
+let s:dark_red        = { "gui": "#870000", "cterm": "1"   }
+let s:light_red       = { "gui": "#ee7777", "cterm": "1"   }
+let s:dark_blue       = { "gui": "#83a598", "cterm": "4"   }
 let s:light_blue      = { "gui": "#B6D6FD", "cterm": "153" }
 let s:dark_cyan       = { "gui": "#20A5BA", "cterm": "6"   }
 let s:light_cyan      = { "gui": "#4FB8CC", "cterm": "14"  }
-let s:dark_green      = { "gui": "#10A778", "cterm": "2"   }
-let s:light_green     = { "gui": "#5FD7A7", "cterm": "10"  }
+let s:dark_green      = { "gui": "#b8bb26", "cterm": "2"   }
+let s:light_green     = { "gui": "#8ec07c", "cterm": "10"  }
 let s:dark_purple     = { "gui": "#523C79", "cterm": "5"   }
 let s:light_purple    = { "gui": "#6855DE", "cterm": "13"  }
-let s:light_yellow    = { "gui": "#F3E430", "cterm": "11"  }
-let s:dark_yellow     = { "gui": "#A89C14", "cterm": "3"   }
+let s:light_yellow    = { "gui": "#fabd2f", "cterm": "11"  }
+let s:dark_yellow     = { "gui": "#b57614", "cterm": "3"   }
 
 if &background == "dark"
   let s:bg               = s:black
@@ -302,3 +302,46 @@ hi link markdownHeadingDelimiter Constant
 
 hi link yamlBlockMappingKey Statement
 hi link pythonOperator Statement
+
+hi! ALEError guifg=#ee7777 ctermfg=NONE guibg=NONE ctermbg=NONE gui=undercurl cterm=undercurl guisp=#870000
+hi! ALEWarning guifg=#fabd2f ctermfg=NONE guibg=NONE ctermbg=NONE gui=undercurl cterm=undercurl guisp=#b57614
+hi! ALEInfo guifg=#83a598 ctermfg=NONE guibg=NONE ctermbg=NONE gui=undercurl cterm=undercurl
+
+hi! RedSign guifg=#cc241d ctermfg=124 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi! YellowSign guifg=#fabd2f ctermfg=214 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi! GreenSign guifg=#b8bb26 ctermfg=142 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi! BlueSign guifg=#83a598 ctermfg=109 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+hi! AquaSign guifg=#8ec07c ctermfg=108 guibg=NONE ctermbg=NONE gui=NONE cterm=NONE
+
+hi! Todo guifg=#eeeeee ctermfg=255 guibg=NONE ctermbg=NONE gui=bold cterm=bold
+
+hi! ShadyFg3 guifg=#bdae93 ctermfg=248 guibg=NONE ctermbg=NONE
+hi! ShadyFg1 guifg=#ebdbb2 ctermfg=223 guibg=NONE ctermbg=NONE
+hi! ShadyBg2 guifg=#504945 ctermfg=239 guibg=NONE ctermbg=NONE
+hi! ShadyBlue guifg=#83a598 ctermfg=109 guibg=NONE ctermbg=NONE
+hi! ShadyBrightBlue guifg=#a5c7ff ctermfg=109 guibg=NONE ctermbg=NONE
+hi! ShadyGray guifg=#928374 ctermfg=245 guibg=NONE ctermbg=NONE
+hi! ShadyYellow guifg=#fabd2f ctermfg=214 guibg=NONE ctermbg=NONE
+hi! ShadyOrange guifg=#fe8019 ctermfg=208 guibg=NONE ctermbg=NONE
+
+hi! link ALEErrorSign RedSign
+hi! link ALEWarningSign YellowSign
+hi! link ALEInfoSign BlueSign
+
+hi! link SignifySignAdd GreenSign
+hi! link SignifySignChange AquaSign
+hi! link SignifySignDelete RedSign
+
+hi! link StartifyBracket ShadyFg3
+hi! link StartifyFile ShadyFg1
+hi! link StartifyNumber ShadyBlue
+hi! link StartifyPath ShadyGray
+hi! link StartifySlash ShadyGray
+hi! link StartifySection ShadyYellow
+hi! link StartifySpecial ShadyBg2
+hi! link StartifyHeader ShadyOrange
+hi! link StartifyFooter ShadyBg2
+
+hi! link Sneak ShadyBrightBlue
+hi! link SneakLabel ShadyBrightBlue
+hi! link SneakScope ShadyBrightBlue
